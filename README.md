@@ -1,30 +1,30 @@
 
 <!---
 
-This README is automatically generated from the comments in these files:
+此README是从这些文件中的注释自动生成的：
 prism-highlighter.html
 
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
+编辑这些文件，我们的readme bot将在这里复制它们！
+编辑此文件，机器人将压缩您的更改:)
 
-The bot does some handling of markdown. Please file a bug if it does the wrong
-thing! https://github.com/PolymerLabs/tedium/issues
+机器人做一些处理markdown。 如果错误，请提交错误
+事情! https://github.com/PolymerLabs/tedium/issues
 
 -->
 
 
 ##&lt;prism-highlighter&gt;
 
-Syntax highlighting via [Prism](http://prismjs.com/).
+语法高亮通过 [Prism](http://prismjs.com/).
 
-Place a `<prism-highlighter>` in your document, preferably as a direct child of
-`<body>`. It will listen for `syntax-highlight` events on its parent element,
-and annotate the code being provided via that event.
+在文档中放置一个`<prism-highlighter>`，最好是
+`<body>`。 它将监听其父元素上的`syntax-highlight`事件，
+并注释通过该事件提供的代码.
 
-The `syntax-highlight` event's detail is expected to have a `code` property
-containing the source to highlight. The event detail can optionally contain a
-`lang` property, containing a string like `"html"`, `"js"`, etc.
+`syntax-highlight`事件的细节应该有一个`code`属性
+包含要突出显示的源。 事件详细信息可以选择性地包含a
+`lang`属性，包含一个字符串，如“html”，“js”`等.
 
-This flow is supported by [`<marked-element>`](https://github.com/PolymerElements/marked-element).
+支持此流程 [`<marked-element>`](https://github.com/PolymerElements/marked-element).
 
 

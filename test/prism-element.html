@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>prism-element basic tests</title>
+    <title>棱镜元件基本测试</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <script src="../../web-component-tester/browser.js"></script>
@@ -51,7 +51,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             Prism.highlight.restore();
           });
 
-          test('highlights on syntax-highlight event', function() {
+          test('语法高亮事件的亮点', function() {
             var ev = {
               code: '<foo>',
               lang: 'markup'
@@ -63,7 +63,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               .to.equal(true);
           });
 
-          test('warns on invalid syntax-highlight event', function() {
+          test('警告无效的语法高亮事件', function() {
               var ev;
 
               sinon.spy(console, 'warn');
@@ -81,7 +81,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               expect(ev.code).to.equal(undefined);
           });
 
-          test('ignores repeated highlights', function() {
+          test('忽略重复的亮点', function() {
             var ev = {
               code: '<foo>'
             };
@@ -94,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           });
 
           suite('applies simple lang detection if none specified', function() {
-              test('detects as markup if begins with tag', function() {
+              test('检测为标记如果以标记开头', function() {
                 var ev = {
                   code: '<foo>'
                 };
@@ -105,7 +105,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   .to.equal(true);
               });
 
-              test('detects as javascript if no tag at start', function() {
+              test('如果在开始时没有标记，则检测为javascript', function() {
                 var ev = {
                   code: 'return;'
                 };
@@ -118,7 +118,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           });
 
           suite('detects language for abbreviated lang', function() {
-              test('detects js as javascript', function() {
+              test('检测js为javascript', function() {
                 var ev = {
                   code: 'return;',
                   lang: 'js'
@@ -130,7 +130,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   .to.equal(true);
               });
 
-              test('detects es as javascript', function() {
+              test('检测es为javascript', function() {
                 var ev = {
                   code: 'return;',
                   lang: 'es'
@@ -142,7 +142,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                   .to.equal(true);
               });
 
-              test('detects c as clike', function() {
+              test('检测C作为类C', function() {
                 var ev = {
                   code: 'return;',
                   lang: 'c'
